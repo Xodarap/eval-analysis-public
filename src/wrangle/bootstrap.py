@@ -123,7 +123,7 @@ def bootstrap_sample(
             values, value_indices = np.unique(category_values, return_inverse=True)
             n_values = len(values)
             # Sample values with replacement: e.g. [0, 0]
-            sampled_values = rng.choice(n_values, size=n_values, replace=True)
+            sampled_values = rng.choice(n_values, size=n_values, replace=False)
 
             # For each sampled value, append corresponding indices to all_new_indices
             # e.g. [0, 0] -> [0, 1, 3, 0, 1, 3]
