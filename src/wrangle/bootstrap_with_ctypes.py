@@ -1,8 +1,10 @@
 import numpy as np
 from ctypes import CDLL, c_int64, c_int32, POINTER
+from pathlib import Path
 
 # Load the compiled C library
-lib = CDLL('./bootstrap_resample.so')
+lib_path = Path(__file__).parent / 'bootstrap_resample.so'
+lib = CDLL(str(lib_path))
 
 # Define the function signatures
 
